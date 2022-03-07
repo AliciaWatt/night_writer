@@ -1,4 +1,5 @@
 class Writer
+  include Hashable
   attr_reader :text_file, :translate_file
 
   def initialize(files)
