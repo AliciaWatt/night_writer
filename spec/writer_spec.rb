@@ -1,4 +1,4 @@
-require './lib/writer'
+require_relative '../lib/writer'
 
 # require 'SimpleCov'
 # SimpleCov.start
@@ -30,4 +30,13 @@ describe Writer do
       expect(@writer.creation_message).to include('Created')
     end
   end
+
+  describe 'translator' do
+    it 'translates from english to braille' do
+      expect(@writer.translator).to be_a(Array)
+      # expect(@writer.translator[0]).to eq(['0', '.'])
+    end
+  end
+
+
 end
