@@ -38,5 +38,9 @@ describe Writer do
     end
   end
 
-
+  describe 'write' do
+    it 'writes all translated braille into a specified file' do
+      expect(@writer.write).to eq([])
+    end
+  end
 end
