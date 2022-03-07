@@ -11,4 +11,8 @@ class Writer
       line.split('')
     end
   end
+
+  def creation_message
+    p "Created '#{translate_file}' containing '#{split_text.length}' characters."
+  end
 end
