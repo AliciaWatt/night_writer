@@ -13,6 +13,10 @@ class Writer
   end
 
   def creation_message
+    if File.file?(text_file)
     p "Created '#{translate_file}' containing '#{split_text.length}' characters."
+  else
+    p "Invalid text file name."
+  end
   end
 end
