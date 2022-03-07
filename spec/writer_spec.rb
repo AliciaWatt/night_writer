@@ -18,6 +18,13 @@ describe  Writer do
     expect(@writer.translate_file).to eq('braille.txt')
   end
 
+  describe 'split_text' do
+    it 'splits text into an array' do
+      expect(@writer.split_text.length).to eq(11)
+      expect(@writer.split_text).to be_a(Array)
+    end
+  end
+
   describe '#creation_message' do
     it 'communicates creation of file and character count' do
       expect(@writer.creation_message).to include('Created')
