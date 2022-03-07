@@ -1,4 +1,4 @@
-require './night_writer'
+require './lib/night_writer'
 
 # require 'simplecov'
 # SimpleCov.start

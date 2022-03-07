@@ -1,4 +1,4 @@
-require './writer'
+require './lib/writer'
 
 # require 'SimpleCov'
 # SimpleCov.start
@@ -15,7 +15,7 @@ describe  Writer do
 
   it 'has attributes' do
     expect(@writer.text_file).to eq('message.txt')
-    expect(@writer.translate_text).to eq('braille.txt')
+    expect(@writer.translate_file).to eq('braille.txt')
   end
 
   describe '#creation_message' do
