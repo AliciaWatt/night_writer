@@ -3,7 +3,7 @@ require './lib/writer'
 # require 'SimpleCov'
 # SimpleCov.start
 
-describe  Writer do
+describe Writer do
   before (:each) do
     text_files = ['message.txt', 'braille.txt']
     @writer = Writer.new(text_files)
