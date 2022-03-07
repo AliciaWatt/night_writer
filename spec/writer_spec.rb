@@ -20,7 +20,7 @@ describe Writer do
 
   describe 'split_text' do
     it 'splits text into an array' do
-      expect(@writer.split_text.length).to eq(11)
+      expect(@writer.split_text.length).to eq(49)
       expect(@writer.split_text).to be_a(Array)
     end
   end
@@ -41,6 +41,27 @@ describe Writer do
   describe 'write' do
     it 'writes all translated braille into a specified file' do
       expect(@writer.write).to eq([])
+    end
+  end
+
+  describe 'first_two_dots' do
+    it 'writes the first two dots for each braille letter' do
+      elements = [[1, 2], [3, 4], [5, 6], [7, 8], [9, 10], [11, 12]]
+      expect(@writer.first_two_dots(elements)).to eq(1)
+    end
+  end
+
+  describe 'middle_two_dots' do
+    it 'writes the first two dots for each braille letter' do
+      elements = [[1, 2], [3, 4], [5, 6], [7, 8], [9, 10], [11, 12]]
+      expect(@writer.middle_two_dots(elements)).to eq(1)
+    end
+  end
+
+  describe 'last_two_dots' do
+    it 'writes the first two dots for each braille letter' do
+      elements = [[1, 2], [3, 4], [5, 6], [7, 8], [9, 10], [11, 12]]
+      expect(@writer.last_two_dots(elements)).to eq(1)
     end
   end
 end
