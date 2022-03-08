@@ -1,6 +1,6 @@
 require_relative 'convert'
 
-class Writer < Convert
+class Writer
   attr_reader :text_file, :translate_file, :converter
 
   def initialize(files)
@@ -24,11 +24,11 @@ class Writer < Convert
   end
 
   def translator
-      text_to_braille_hash = converter.text_to_braille
-      split_text.map do |letter|
-        text_to_braille_hash[letter]
-      end
+    text_to_braille_hash = converter.text_to_braille
+    split_text.map do |letter|
+      text_to_braille_hash[letter]
     end
+  end
 
   def write
     letters = translator
