@@ -22,7 +22,7 @@ describe Reader do
     it 'splits braille into an array' do
       allow(@reader).to receive(:braille_file).and_return('braille.txt')
 
-      expect(@reader.split_braille.length).to eq(49)
+      expect(@reader.split_braille.length).to eq(56)
       expect(@reader.split_braille).to be_a(Array)
     end
   end
