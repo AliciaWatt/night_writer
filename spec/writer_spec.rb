@@ -23,7 +23,7 @@ describe Writer do
     it 'splits text into an array' do
       allow(@writer).to receive(:text_file).and_return('message.txt')
 
-      expect(@writer.split_text.length).to eq(49)
+      expect(@writer.split_text.length).to eq(48)
       expect(@writer.split_text).to be_a(Array)
     end
   end
