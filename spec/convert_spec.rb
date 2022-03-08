@@ -23,3 +23,5 @@ describe Convert do
     end
   end
 end
+
+require 'pry'; binding.pry
