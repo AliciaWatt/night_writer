@@ -41,5 +41,11 @@ class Reader
       p "Invalid braille file name."
     end
   end
-  
+
+  def translator
+    braille_to_text_hash = converter.braille_to_text
+    split_braille.map do |character|
+      braille_to_text_hash[character]
+    end
+  end 
 end
