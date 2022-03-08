@@ -43,4 +43,10 @@ describe Reader do
       expect(@reader.creation_message).to eq(expected)
     end
   end
+  describe 'translator' do
+    it 'translates from braille to english' do
+      expect(@reader.translator).to be_a(Array)
+      expect(@reader.translator[0]).to eq('t')
+    end
+  end
 end
