@@ -49,4 +49,10 @@ describe Reader do
       expect(@reader.translator[0]).to eq('t')
     end
   end
+
+  describe 'reader' do
+    it 'reads all braille into a new text file' do
+      expect(@reader.read).to eq([])
+    end
+  end
 end
