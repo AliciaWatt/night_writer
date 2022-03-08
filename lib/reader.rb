@@ -33,4 +33,13 @@ class Reader
     end
     braille_by_lines
   end
+
+  def creation_message
+    if File.file?(braille_file)
+      p "Created '#{translate_file}' containing #{split_braille.length} characters."
+    else
+      p "Invalid braille file name."
+    end
+  end
+  
 end
