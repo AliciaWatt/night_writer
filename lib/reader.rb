@@ -52,7 +52,7 @@ class Reader
   def read
     characters = translator
     File.open(translate_file, 'w')do |file|
-    until characters = []
+    until characters == []
       file.write "#{characters.shift}"
     end
   end
