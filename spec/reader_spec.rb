@@ -26,4 +26,21 @@ describe Reader do
       expect(@reader.split_braille).to be_a(Array)
     end
   end
+
+  describe 'creation_message' do
+    it 'sends a message confirming creation of the new file' do
+      allow(@reader).to receive(:translate_file).and_return('translate_to_english.txt')
+      allow(@reader).to receive(:split_braille).and_return([1, 2, 3, 4])
+
+      expected = "Created 'translate_to_english.txt' containing 4 characters."
+      expect(@reader.creation_message).to eq(expected)
+    end
+
+    it 'sends Invalid braille file name if invalid braille file' do
+      allow(@reader).to receive(:braille_file).and_return('incorrect file')
+
+      expected = "Invalid braille file name."
+      expect(@reader.creation_message).to eq(expected)
+    end
+  end
 end
