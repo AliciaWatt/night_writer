@@ -47,5 +47,15 @@ class Reader
     split_braille.map do |character|
       braille_to_text_hash[character]
     end
-  end 
+  end
+
+  def read
+    characters = translator
+    File.open(translate_file, 'w')do |file|
+    until characters = []
+      file.write "#{characters.shift}"
+    end
+  end
+  characters
+end
 end
