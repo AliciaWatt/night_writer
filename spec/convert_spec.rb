@@ -1,5 +1,8 @@
 require './lib/convert'
 
+require 'SimpleCov'
+SimpleCov.start
+
 describe Convert do
   before (:each) do
     @converter = Convert.new
