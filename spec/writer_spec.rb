@@ -1,8 +1,8 @@
 require './lib/writer'
 # require './lib/convert'
 
-# require 'SimpleCov'
-# SimpleCov.start
+require 'SimpleCov'
+SimpleCov.start
 
 describe Writer do
   before (:each) do
@@ -48,7 +48,7 @@ describe Writer do
   describe 'translator' do
     it 'translates from english to braille' do
       expect(@writer.translator).to be_a(Array)
-      # expect(@writer.translator[0]).to eq(['0', '.', '0', '0', '.', '.'])
+      expect(@writer.translator[0]).to eq([".", "0", "0", "0", "0", "."])
     end
   end
 
