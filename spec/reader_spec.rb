@@ -12,4 +12,9 @@ describe Reader do
   it 'exists' do
     expect(@reader).to be_a(Reader)
   end
+
+  it 'has attributes' do
+    expect(@reader.braille_file).to eq("braille.txt")
+    expect(@reader.translate_file).to eq('translate_to_english.txt')
+  end
 end
