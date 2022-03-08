@@ -1,7 +1,7 @@
 class Convert
   def text_to_braille
-    split_alphabet = splitter('./lib/alphabet.txt')
-    split_braille = splitter('./lib/braille_alphabet.txt')
+    split_alphabet = splitter("./lib/alphabet.txt")
+    split_braille = splitter("./lib/braille_alphabet.txt")
     text_to_braille_hash = {}
     split_alphabet.zip(split_braille) do |alphabet, braille|
       text_to_braille_hash[alphabet] = braille.split('')
