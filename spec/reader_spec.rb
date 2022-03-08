@@ -17,4 +17,13 @@ describe Reader do
     expect(@reader.braille_file).to eq("braille.txt")
     expect(@reader.translate_file).to eq('translate_to_english.txt')
   end
+
+  describe 'split_braille' do
+    it 'splits braille into an array' do
+      allow(@reader).to receive(:braille_file).and_return('braille.txt')
+
+      expect(@reader.split_braille.length).to eq(49)
+      expect(@reader.split_braille).to be_a(Array)
+    end
+  end
 end
