@@ -33,9 +33,19 @@ class Writer
   def write
     letters = translator
     File.open(translate_file, 'w') do |file|
-      until letters == []
-        file.write "#{letters.shift}\n"
+      # until letters == []
+      letters.each do |letter|
+        file.write "#{letter[0]}#{letter[1]}"
       end
+      file.write "\n"
+      letters.each do |letter|
+        file.write "#{letter[2]}#{letter[3]}"
+      end
+      file.write "\n"
+      letters.each do |letter|
+        file.write "#{letter[4]}#{letter[5]}"
+      end
+      file.write "\n"
     end
     letters
   end
