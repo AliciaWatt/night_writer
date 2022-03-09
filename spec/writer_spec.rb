@@ -58,25 +58,25 @@ describe Writer do
     end
   end
 
-  describe 'first_two_dots' do
-    it 'writes the first two dots for each braille letter' do
-      elements = [[1, 2], [3, 4], [5, 6], [7, 8], [9, 10], [11, 12]]
-      expect(@writer.first_two_dots(elements)).to eq(1)
-    end
-  end
-
-  describe 'middle_two_dots' do
-    it 'writes the first two dots for each braille letter' do
-      elements = [[1, 2], [3, 4], [5, 6], [7, 8], [9, 10], [11, 12]]
-      expect(@writer.middle_two_dots(elements)).to eq(1)
-    end
-  end
-
-  describe 'last_two_dots' do
-    it 'writes the first two dots for each braille letter' do
-      elements = [[1, 2], [3, 4], [5, 6], [7, 8], [9, 10], [11, 12]]
-      expect(@writer.last_two_dots(elements)).to eq(1)
-    end
-  end
+  # describe 'first_two_dots' do
+  #   it 'writes the first two dots for each braille letter' do
+  #     elements = [[1, 2], [3, 4], [5, 6], [7, 8], [9, 10], [11, 12]]
+  #     expect(@writer.first_two_dots(elements)).to eq(1)
+  #   end
+  # end
+  #
+  # describe 'middle_two_dots' do
+  #   it 'writes the first two dots for each braille letter' do
+  #     elements = [[1, 2], [3, 4], [5, 6], [7, 8], [9, 10], [11, 12]]
+  #     expect(@writer.middle_two_dots(elements)).to eq(1)
+  #   end
+  # end
+  #
+  # describe 'last_two_dots' do
+  #   it 'writes the first two dots for each braille letter' do
+  #     elements = [[1, 2], [3, 4], [5, 6], [7, 8], [9, 10], [11, 12]]
+  #     expect(@writer.last_two_dots(elements)).to eq(1)
+  #   end
+  # end
 end
 # require 'pry'; binding.pry
